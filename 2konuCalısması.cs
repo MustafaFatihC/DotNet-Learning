@@ -81,7 +81,7 @@
 
 // Personel personel1 = new Personel(name, age, department);
 
-// personel1.Showİnfo();
+// personel1.ShowInfo();
 // class Personel
 // {
 //     public string Name;
@@ -96,7 +96,7 @@
 //     }
 
 
-//     public void Showİnfo()
+//     public void ShowInfo()
 //     {
 //         Console.WriteLine($"Name :{Name}");
 //         Console.WriteLine($"Age :{Age}");
@@ -187,7 +187,7 @@
 // Console.Write("Please enter your age ->");
 // student1.Age = Convert.ToInt32(Console.ReadLine());
 
-// student1.Showİnfo();
+// student1.ShowInfo();
 
 
 
@@ -210,7 +210,7 @@
 //         }
 //     }
 
-//     public void Showİnfo()
+//     public void ShowInfo()
 //     {
 //         Console.WriteLine($"Your {Age} years old ! ");
 //         Console.WriteLine($"Your naem is {Name} ! ");

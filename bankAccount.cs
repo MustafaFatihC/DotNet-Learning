@@ -6,15 +6,18 @@ BankAccount account3 = new BankAccount("Mehmet", 5000);
 Console.WriteLine(" ");
 Console.WriteLine("----------------------");
 Console.WriteLine(" ");
-account1.Showİnfo();
+account1.ShowInfo();
 Console.WriteLine(" ");
 Console.WriteLine("----------------------");
 Console.WriteLine(" ");
-account2.Showİnfo();
+account2.ShowInfo();
+account2.ShowInfo();
+account2.ShowInfo();
+account2.ShowInfo();
 Console.WriteLine(" ");
 Console.WriteLine("----------------------");
 Console.WriteLine(" ");
-account3.Showİnfo();
+account3.ShowInfo();
 Console.WriteLine(" ");
 Console.WriteLine("----------------------");
 
@@ -44,7 +47,7 @@ class BankAccount
     }
 
 
-    public void Showİnfo()
+    public void ShowInfo()
     {
         Console.WriteLine($"Name -> {Name}");
         Console.WriteLine($"Balance -> {Balance}");
