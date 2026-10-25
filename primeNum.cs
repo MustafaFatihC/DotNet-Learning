@@ -5,11 +5,11 @@ while (true) //! Checks the number value if the value smaller than two gets the 
         System.Console.Write("Please enter a number :");
         int number = Convert.ToInt32(Console.ReadLine()); //? Get a number from the user
         bool result = true;
-
+        double newNum = Math.Sqrt(number);
         if (number >= 2)
         {
 
-            for (int i = 2; i < number; i++) //? Checking the number can divide the i parameters
+            for (int i = 2; i <= newNum; i++) //? Checking the number can divide the i parameters
             {
                 if (number % i == 0)
                 {
