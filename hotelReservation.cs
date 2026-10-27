@@ -1,5 +1,5 @@
 Dictionary<string, string> rooms = new Dictionary<string, string>();
-Dictionary<string, string> reservedRooms = new Dictionary<string, string>();
+Dictionary<string, string> reservedRooms = new Dictionary<string, string>(); //? Creat dict
 
 rooms.Add("101", "Available");
 rooms.Add("102", "Available");
@@ -21,7 +21,7 @@ while (true)
     Console.WriteLine("5. Calculate Total Revenue");
     Console.WriteLine("6. Exit");
 
-    Console.Write("What do you want -> ");
+    Console.Write("What do you want -> "); //? Get menu operation
     string answer = Console.ReadLine() ?? "";
 
     if (answer == "6")
@@ -56,7 +56,7 @@ while (true)
                 Console.WriteLine("This room is already reserved!");
             }
             else
-            {
+            {                                                       //? Add and change values
                 rooms[roomNum1] = "Reserved";
                 reservedRooms.Add(roomNum1, "Reserved");
                 Console.WriteLine("Room reserved successfully!");
