@@ -10,84 +10,100 @@ System.Console.WriteLine($"You have 3 chance to enter correct pasword!");
 while (chance >= 1 && isRunning)
 {
 
-
-
     System.Console.Write("Please enter Pasword :");
     string inPasword = Console.ReadLine();
 
     if (inPasword == password)
     {
-        System.Console.WriteLine("===== BANK ATM =====");
-
-        System.Console.WriteLine("1.Check Balance");
-        System.Console.WriteLine("2. Deposit Money");
-        System.Console.WriteLine("3. Withdraw Money");
-        System.Console.WriteLine("4. Change Password");
-        System.Console.WriteLine("5. Transaction History");
-        System.Console.WriteLine("E. Exit");
-
-        System.Console.Write("What option do you prefer:");
-        string choosenOption = Console.ReadLine();
-
-        switch (choosenOption)
+        while (isRunning)
         {
-            case "1":
-                System.Console.WriteLine($"You have {balance}$ money");
-                break;
-            case "2":
+            System.Console.WriteLine("===== BANK ATM =====");
 
-                Console.Write("How much money do you deposit: ");
-                int depositMoney;
+            System.Console.WriteLine("1.Check Balance");
+            System.Console.WriteLine("2. Deposit Money");
+            System.Console.WriteLine("3. Withdraw Money");
+            System.Console.WriteLine("4. Change Password");
+            System.Console.WriteLine("5. Transaction History");
+            System.Console.WriteLine("E. Exit");
 
-                if (int.TryParse(Console.ReadLine(), out depositMoney))
-                {
-                    balance += depositMoney;
-                }
-                else
-                {
-                    Console.WriteLine("Please enter a valid number!");
-                }
-                System.Console.WriteLine($"You have {balance} money now...");
-                break;
+            System.Console.Write("What option do you prefer:");
+            string choosenOption = Console.ReadLine();
 
-            case "3":
+            switch (choosenOption)
+            {
+                case "1":
+                    System.Console.WriteLine($"You have {balance}$ money");
+                    break;
+                case "2":
 
-                Console.Write("How much money do you withdraw: ");
-                int withdrawMoney;
+                    Console.Write("How much money do you deposit: ");
+                    int depositMoney;
 
-                if (int.TryParse(Console.ReadLine(), out withdrawMoney))
-                {
-                    balance += withdrawMoney;
-                }
-                else
-                {
-                    Console.WriteLine("Please enter a valid number!");
-                }
-                System.Console.WriteLine($"You have {balance} money now...");
-                break;
-            case "4":
-                System.Console.Write("Please enter new pasword :");
-                string newPasword = Console.ReadLine();
-                if (newPasword == password)
-                {
-                    System.Console.WriteLine("You must enter different pasword!");
-                }
-                else
-                {
-                    password = newPasword;
-                    System.Console.WriteLine($"Your pasword : {newPasword}");
+                    if (int.TryParse(Console.ReadLine(), out depositMoney))
+                    {
+                        balance += depositMoney;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter a valid number!");
+                    }
+                    System.Console.WriteLine($"You have {balance} money now...");
+                    break;
 
-                }
-                break;
-            case "E":
-                System.Console.WriteLine("You are quiting...");
-                Thread.Sleep(1000);
-                isRunning = false;
-                break;
+                case "3":
 
-            default:
-                System.Console.WriteLine("Please enter valid operation!");
-                break;
+                    while (true)
+                    {
+                        Console.Write("How much money do you withdraw: ");
+                        int withdrawMoney;
+
+
+
+                        if (int.TryParse(Console.ReadLine(), out withdrawMoney) && balance >= withdrawMoney && withdrawMoney > 0)
+                        {
+                            balance -= withdrawMoney;
+                            System.Console.WriteLine($"You have {balance} money now...");
+                            break;
+                        }
+                        else if (withdrawMoney > balance)
+                        {
+                            System.Console.WriteLine("You don't have inuf money !");
+                        }
+                        else if (withdrawMoney <= 0)
+                        {
+                            System.Console.WriteLine("The money which one you want to withdraw money 0 to your balance");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please enter a valid number!");
+                        }
+                    }
+
+                    break;
+                case "4":
+                    System.Console.Write("Please enter new pasword :");
+                    string newPasword = Console.ReadLine();
+                    if (newPasword == password)
+                    {
+                        System.Console.WriteLine("You must enter different pasword!");
+                    }
+                    else
+                    {
+                        password = newPasword;
+                        System.Console.WriteLine($"Your pasword : {newPasword}");
+
+                    }
+                    break;
+                case "E":
+                    System.Console.WriteLine("You are quiting...");
+                    Thread.Sleep(1000);
+                    isRunning = false;
+                    break;
+
+                default:
+                    System.Console.WriteLine("Please enter valid operation!");
+                    break;
+            }
         }
 
     }
