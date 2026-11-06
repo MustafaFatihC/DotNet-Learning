@@ -3,7 +3,7 @@ string password = "1234";
 decimal balance = 5000;
 int chance = 3;
 bool isRunning = true;
-
+List<string> transactions = new List<string>();
 
 System.Console.WriteLine($"You have 3 chance to enter correct pasword!");
 
@@ -36,18 +36,28 @@ while (chance >= 1 && isRunning)
                     break;
                 case "2":
 
-                    Console.Write("How much money do you deposit: ");
-                    int depositMoney;
+                    while (true)
+                    {
+                        Console.Write("How much money do you deposit: ");
+                        int depositMoney;
 
-                    if (int.TryParse(Console.ReadLine(), out depositMoney))
-                    {
-                        balance += depositMoney;
+                        if (int.TryParse(Console.ReadLine(), out depositMoney) && depositMoney > 0)
+                        {
+                            balance += depositMoney;
+                            System.Console.WriteLine($"You have {balance} money now...");
+                            transactions.Add($"{depositMoney}$ deposited");
+                            break;
+                        }
+                        else if (depositMoney <= 0)
+                        {
+                            System.Console.WriteLine("The money which one you want to deposit is bigger than 0 !");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please enter a valid number!");
+                        }
+
                     }
-                    else
-                    {
-                        Console.WriteLine("Please enter a valid number!");
-                    }
-                    System.Console.WriteLine($"You have {balance} money now...");
                     break;
 
                 case "3":
@@ -63,6 +73,7 @@ while (chance >= 1 && isRunning)
                         {
                             balance -= withdrawMoney;
                             System.Console.WriteLine($"You have {balance} money now...");
+                            transactions.Add($"{withdrawMoney}$ withdrawn");
                             break;
                         }
                         else if (withdrawMoney > balance)
@@ -92,6 +103,12 @@ while (chance >= 1 && isRunning)
                         password = newPasword;
                         System.Console.WriteLine($"Your pasword : {newPasword}");
 
+                    }
+                    break;
+                case "5":
+                    foreach (var item in transactions)
+                    {
+                        System.Console.WriteLine(item);
                     }
                     break;
                 case "E":
