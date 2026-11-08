@@ -44,7 +44,7 @@ while (true && isRunning)
 
             foreach (var product in products)
             {
-                System.Console.WriteLine($"Product item Name : {product.Key} , item Value : {product.Value}");
+                System.Console.WriteLine($"Product item Name : {product.Key} , item Value : {product.Value} , item stock : {stocks[product.Key]}");
             }
             break;
 
@@ -94,7 +94,7 @@ while (true && isRunning)
             foreach (var order in orderHistory)
             {
 
-                System.Console.WriteLine($"Product item Name : {order.Key} , item Value : {order.Value}");
+                System.Console.WriteLine($"Product item Name : {order.Key} , item Value : {order.Value} ");
 
             }
 
