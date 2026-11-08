@@ -104,7 +104,7 @@ while (true && isRunning)
             {
                 totalCart += order.Value * orderStocks[order.Key];
                 stocks[order.Key] -= orderStocks[order.Key];
-            }
+            } //? Total cart value 
 
             System.Console.WriteLine($"Your Cart total is {totalCart}");
 
@@ -114,14 +114,14 @@ while (true && isRunning)
 
             totalCart = 0;
             orderHistory.Clear();
-            orderStocks.Clear();
+            orderStocks.Clear();  //? Clear the cart
 
             break;
 
         case "6":
             foreach (var buy in buyingHistory)
             {
-                System.Console.WriteLine(buy);
+                System.Console.WriteLine(buy); //? Adding last order to buying history 
             }
             break;
 
