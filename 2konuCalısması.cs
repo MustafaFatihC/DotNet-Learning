@@ -235,3 +235,18 @@
 
 
 
+
+
+//! Methods
+
+// static void SayHello()
+// {
+//     System.Console.WriteLine("Hello!");
+// }
+
+// SayHello();
+// SayHello();
+// SayHello();
+
+
+
