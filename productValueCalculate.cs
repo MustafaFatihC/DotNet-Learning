@@ -77,6 +77,7 @@ while (true)
 
 if (mainAnswer == "y")
 {
+    Console.ForegroundColor = ConsoleColor.Red;
     decimal productValue = ReadDecimal("Please enter  product value:");
 
     decimal taxValue = ReadDecimal("Please enter tax value:");
@@ -91,11 +92,13 @@ if (mainAnswer == "y")
     decimal discountPrice = CalculateDiscount((priceTax + productValue), discountValue, eXtraDiscount);
     decimal finalPrice = FinalPrice(productValue, priceTax, discountPrice);
     //!Methodları yazdırma!
+    Console.ForegroundColor = ConsoleColor.Blue;
     System.Console.WriteLine($"\n Tax price :{priceTax} \n Discount price : {discountPrice} \n Final Price : {finalPrice}");
 
 }
 else
 {
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
 
     decimal productValue = ReadDecimal("Please enter  product value:");
 
@@ -109,6 +112,7 @@ else
     decimal discountPrice = CalculateDiscount((priceTax + productValue), discountValue);
     decimal finalPrice = FinalPrice(productValue, priceTax, discountPrice);
     //!Methodları yazdırma!
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
     System.Console.WriteLine($"\n Tax price :{priceTax} \n Discount price : {discountPrice} \n Final Price : {finalPrice}");
 
 }
