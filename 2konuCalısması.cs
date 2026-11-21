@@ -249,28 +249,28 @@
 // SayHello();
 
 
-Car car1 = new Car();
-System.Console.WriteLine($"Araba üreten firma :{car1.Brand}");
-System.Console.WriteLine($"Araba modeli :{car1.Model}");
-System.Console.WriteLine("------------");
-Car car2 = new Car("BMW", "M4");
-System.Console.WriteLine($"Araba üreten firma :{car2.Brand}");
-System.Console.WriteLine($"Araba modeli :{car2.Model}");
+// Car car1 = new Car();
+// System.Console.WriteLine($"Araba üreten firma :{car1.Brand}");
+// System.Console.WriteLine($"Araba modeli :{car1.Model}");
+// System.Console.WriteLine("------------");
+// Car car2 = new Car("BMW", "M4");
+// System.Console.WriteLine($"Araba üreten firma :{car2.Brand}");
+// System.Console.WriteLine($"Araba modeli :{car2.Model}");
 
-class Car
-{
-    public string Brand;
-    public string Model;
+// class Car
+// {
+//     public string Brand;
+//     public string Model;
 
-    public Car() //* Parametresiz Constructor
-    {
-        Brand = "Bilinmiyor";
-        Model = "Bilinmiyor";
-    }
-    public Car(string brand, string model)
-    {
-        Brand = brand;
-        Model = model;
+//     public Car() //* Parametresiz Constructor
+//     {
+//         Brand = "Bilinmiyor";
+//         Model = "Bilinmiyor";
+//     }
+//     public Car(string brand, string model)
+//     {
+//         Brand = brand;
+//         Model = model;
 
-    }
-}
+//     }
+// }
