@@ -3,23 +3,13 @@ BankAccount account1 = new BankAccount();
 BankAccount account2 = new BankAccount("Ahmet");
 
 BankAccount account3 = new BankAccount("Mehmet", 5000);
-Console.WriteLine(" ");
-Console.WriteLine("----------------------");
-Console.WriteLine(" ");
+
 account1.ShowInfo();
-Console.WriteLine(" ");
-Console.WriteLine("----------------------");
-Console.WriteLine(" ");
+
 account2.ShowInfo();
-account2.ShowInfo();
-account2.ShowInfo();
-account2.ShowInfo();
-Console.WriteLine(" ");
-Console.WriteLine("----------------------");
-Console.WriteLine(" ");
+
 account3.ShowInfo();
-Console.WriteLine(" ");
-Console.WriteLine("----------------------");
+
 
 
 
@@ -49,7 +39,10 @@ class BankAccount
 
     public void ShowInfo()
     {
+        System.Console.WriteLine("");
+        System.Console.WriteLine("---------------");
         Console.WriteLine($"Name -> {Name}");
         Console.WriteLine($"Balance -> {Balance}");
+        System.Console.WriteLine("---------------");
     }
 }
